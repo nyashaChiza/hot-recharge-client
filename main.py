@@ -1,5 +1,5 @@
 import loguru
-from HTTPclient.ht_client import Client
+from HTTPclient.client import Client
 from dotenv import load_dotenv
 import os
 
