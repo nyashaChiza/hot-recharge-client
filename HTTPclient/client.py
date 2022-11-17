@@ -47,7 +47,6 @@ class Client():
         recharge_data_bundle_response = self.api.dataBundleRecharge(product_code=data_bundle_code, number=recipient_phone_number, mesg=custom_message)
         return recharge_data_bundle_response
 
-
     def recharge_airtime_response(self, airtime_amount:int, recipient_phone_number:str)->object:
         custom_message = f'Your account has been topped with {airtime_amount} RTGS .\n Thank you for doing business with Airtym.com'
         response = self.api.rechargePinless(amount=airtime_amount, number=recipient_phone_number, mesg=custom_message)
