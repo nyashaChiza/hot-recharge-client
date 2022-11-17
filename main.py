@@ -8,6 +8,7 @@ ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
 dotenv_path = os.path.join(ROOT_DIR, '.env')
 load_dotenv(dotenv_path)
 
+#example call to client method
 
 access_code=os.getenv('ACC_EMAIL_ADDRESS')
 access_password=os.getenv('ACC_PASSWORD')
