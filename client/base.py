@@ -70,7 +70,17 @@ class Client():
         response = self.session.post(url, json=body)
         return response.json()
     
+    def buy_bundle(self,product_code,recipient):
+        self.reset_reference()
+        url = "https://ssl.hot.co.zw/api/v1/agents/recharge-data"
+        custom_message = f'The account {recipient} has been topped.\n Thank you for doing business with Airtym.com'
+        body ={"ProductCode": product_code,"targetMobile":recipient }
+        
+        response = self.session.post(url, json=body)
+        return response.json()
     
+        
+        
     def recharge_zesa(self, meter_number:str, amount:int)->object:
          #zesa logic here
         return None
